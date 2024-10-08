@@ -3,12 +3,18 @@ import hector.*
 import config.*
 
 
+object juego {
+    method iniciar() {
+		game.addVisualCharacter(hector)
 
+	}
+}
 program granjavilla {
 	game.title("Granjavilla")
-	game.height(100)
-	game.width(100)
-	game.boardGround("ground.jpg")
-
+	game.height(10)
+	game.width(10)
+	game.boardGround("ground.png")
+    juego.iniciar()
+    game.showAttributes(hector) //Debug
 	game.start()
 }
