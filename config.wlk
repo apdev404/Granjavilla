@@ -1,5 +1,6 @@
 import hector.*
 import cultivos.*
+import wollok.game.*
 object config {
 	method configurarTeclas() {
 			keyboard.m().onPressDo({hector.sembrar(maiz)})
