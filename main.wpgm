@@ -13,8 +13,8 @@ object juego {
 }
 program granjavilla {
 	game.title("Granjavilla")
-	game.height(10)
-	game.width(10)
+	game.height(20)
+	game.width(20)
 	game.boardGround("ground.png")
     juego.iniciar()
     game.showAttributes(hector) //Debug

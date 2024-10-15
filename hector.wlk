@@ -15,14 +15,21 @@ object hector {
     }
   }
 
-  
+  method regar() {
+    var semilla
+    if(game.getObjectsIn(self.position()).size()>1){
+      semilla  = game.uniqueCollider(self)
+      semilla.regar()
+    }else game.say(self, "No hay cultivos aqui")
+    
+  }
 
   method vender() {
     
   }
 
   method irA(newPos) {
-    if(newPos.x().between(0,9) && newPos.y().between(0,9)){
+    if(newPos.x().between(0,19) && newPos.y().between(0,19)){
       position = newPos
     }
 }

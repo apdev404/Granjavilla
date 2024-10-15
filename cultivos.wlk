@@ -11,9 +11,6 @@ class Cultivos{
     var property position 
     method image() = null
     
-    
-    
-
 }
 
 class Maiz inherits Cultivos(){
@@ -34,26 +31,19 @@ class Trigo inherits Cultivos(){
       }else if(etapa==2){
         'wheat_2.png'
       }else 'wheat_3.png'
-
-
     }
+
     method regar(){
       if(etapa !=3){
         etapa+=1
       }else etapa=0
-      
     }
 }
-
-
-
-
 
 class Tomaco inherits Cultivos(){
     override method image() = 'tomaco.png'
     method regar() {
-      position.up(1)
-     
+      self.position().up(1)
     }
 }
 
