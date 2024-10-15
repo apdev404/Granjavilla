@@ -43,7 +43,9 @@ class Trigo inherits Cultivos(){
 class Tomaco inherits Cultivos(){
     override method image() = 'tomaco.png'
     method regar() {
-      self.position().up(1)
+      if(position.y().between(0, 18)){
+        position = self.position().up(1)
+      }else position = self.position().down(19)
     }
 }
 
