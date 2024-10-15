@@ -1,13 +1,15 @@
 import wollok.game.*
 import hector.*
 import config.*
+import cultivos.*
 
 
 object juego {
     method iniciar() {
-		game.addVisualCharacter(hector)
-
+		game.addVisual(hector)
+		config.configurarTeclas()
 	}
+
 }
 program granjavilla {
 	game.title("Granjavilla")

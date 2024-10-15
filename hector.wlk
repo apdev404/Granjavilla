@@ -1,4 +1,5 @@
 import wollok.game.*
+import cultivos.*
 object hector {
   var property ganancias = 0
   var property position = game.origin()
@@ -6,13 +7,12 @@ object hector {
   method image() {
     return "player.png"  
   }
-  method regar() {
-    
-  }
+ 
 
   method sembrar(semilla) {
-    semilla.position(position)
-    game.addVisual(semilla)
+    if(game.getObjectsIn(self.position()).size()==1){
+        game.addVisual(semilla)
+    }
   }
 
   
